@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.show{
+    padding: 16px;
+    background-color: rgb(86, 2, 94);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.show:hover{
+    background-color: rgb(120, 0, 131);
+}
+.show:active{
+    background-color: rgb(161, 0, 175);
+}
+
+.container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(213, 105, 255, 0.438);
+    display: none;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal{
+    background-color: rgb(117, 0, 146);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.616);
+    height: 150px;
+    color: white;
+    padding: 6px;
+    overflow: hidden;
+}
+.line{
+    padding: 10px;
+}
+
+.close{
+    position: absolute;
+    right: 1px;
+    top: -2px;
+    /* background-color: yellow; */
+    font-size: 20px;
+    background-color: rgba(45, 0, 71, 0.473);
+    padding: 0px 6px 6px 6px;
+    cursor: pointer;
+}
+.close:hover{
+    background-color: rgb(53, 0, 66);
+}

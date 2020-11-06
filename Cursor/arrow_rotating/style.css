@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.box{
+    display: none;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(-45deg, #ffffff00 75%, #000 25%);
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+    border-right: 0;
+    border-bottom: 0;
+    transform-origin: top left;
+    pointer-events: none;
+}
+
+.container{
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(151, 151, 151);
+    border-radius: 5px;
+}
