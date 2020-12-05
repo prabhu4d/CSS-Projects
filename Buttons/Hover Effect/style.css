@@ -1,0 +1,48 @@
+/* https://freefrontend.com/css-button-hover-effects/ */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    grid-auto-rows: 50vh;
+}
+
+.btn-container{
+    position: relative;
+    background-color: rgb(246, 246, 246);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-container::after{
+    content: '';
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(rgba(255, 255, 255, 0.02) , rgba(0, 0, 0, 0.05) );
+    border-top: 10px solid black;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.btn-container:hover:after{
+    transform: translateY(0%);
+}
+
+.button{
+    background-color: red;
+    height: 80px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
