@@ -1,0 +1,36 @@
+.double-box-dance{
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.double-box-dance span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 102, 0);
+    animation: box-rotate-scale-translate 2s infinite ease-in-out;
+}
+.double-box-dance span:last-child{
+    animation-delay: 1s;
+}
+
+@keyframes box-rotate-scale-translate{
+    25%{
+        transform: translateX(55px) scale(0.6) rotate(-90deg);
+    }
+    50%{
+        transform: translate(55px, 55px) rotate(-179deg);
+    }
+    50.1%{
+        transform: translate(55px, 55px) rotate(-180deg);
+    }
+    75%{
+        transform: translate(0px, 55px) scale(0.6) rotate(-270deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}

@@ -12,7 +12,7 @@
 
 .loader{
     position: relative;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(251, 251, 251);
     overflow: hidden;
     cursor: pointer;
     display: flex;
@@ -25,7 +25,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    background: linear-gradient(rgba(255, 255, 255, 0.02) , rgba(0, 0, 0, 0.05) );
+    background: linear-gradient(rgba(255, 255, 255, 0.02) , rgba(0, 0, 0, 0.1) );
     border-top: 10px solid black;
     transform: translateY(100%);
     width: 100%;

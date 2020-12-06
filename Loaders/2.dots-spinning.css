@@ -3,6 +3,7 @@
 }
 .sk-chase {
   width: 60px;
+  background-color: transparent;
   height: 60px;
   position: relative;
   animation: sk-chase 2.5s infinite linear both;

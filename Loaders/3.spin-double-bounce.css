@@ -1,0 +1,28 @@
+.spin-double-bounce{
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+.spin-double-bounce .circle{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 60, 255, 0.287);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin-double-bounce-anime 2s linear infinite;
+}
+.spin-double-bounce .circle:last-child{
+    animation-delay: 1s;
+
+}
+
+@keyframes spin-double-bounce-anime{
+    0%, 100%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
