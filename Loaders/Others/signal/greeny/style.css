@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+}
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 40px;
+}
+.bar{
+    background-color: white;
+    width: 5px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 1px;
+    transform-origin: bottom;
+    border-radius: 5px 5px 0px 0px;
+    animation: loading 0.8s ease-in-out infinite;
+}
+.bar1, .bar9{
+    animation-delay: 0.1s;
+}
+.bar2, .bar10{
+    animation-delay: 0.2s;
+}
+.bar3,.bar11{
+    animation-delay: 0.3s;
+}
+.bar4,.bar12{
+    animation-delay: 0.4s;
+}
+.bar5,.bar13{
+    animation-delay: 0.5s;
+}
+.bar6,.bar14{
+    animation-delay: 0.6s;
+}
+.bar7,.bar15{
+    animation-delay: 0.7s;
+}
+.bar8,.bar16{
+    animation-delay: 0.8s;
+}
+@keyframes loading{
+    0%{
+        transform: scale(0.1);
+        background: rgba(0, 190, 48, 0.993);
+    }
+    50%{
+        transform: scale(1);
+        background: rgba(3, 240, 62, 0.993);
+    }
+    100%{
+        transform: scale(0.1);
+        background: transparent;
+    }
+}

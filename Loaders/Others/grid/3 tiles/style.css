@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
+}
+.loader span{
+    position: absolute;
+    border-radius: 5px;
+    margin: 5px;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    animation: animate 1s linear infinite;
+}
+.loader span:nth-child(1){
+     background-color: rgba(0, 0, 0, 0.925);
+     animation-delay: 0s;
+}
+.loader span:nth-child(2){
+     background-color: rgba(0, 0, 0, 0.781);
+     animation-delay: 0.333s;
+}
+.loader span:nth-child(3){
+     background-color: rgba(0, 0, 0, 0.479);
+     animation-delay: 0.666s;
+}
+@keyframes animate{
+    0%,87.5%,100%{
+        top: 0;
+        left: 0;
+    }
+    12.5%,25%{
+        top: 0;
+        left: 50%;
+    }
+    37.5%,50%{
+        top: 50%;
+        left: 50%;
+    }
+    62.5%,75%{
+        top: 50%;
+        left: 0;
+    }
+}

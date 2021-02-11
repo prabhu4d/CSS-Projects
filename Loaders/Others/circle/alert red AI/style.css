@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f8f8f749;
+}
+h2{
+    margin: 50px;
+    margin-left: 80px;
+    text-align: center;
+    align-items: center;
+}
+h2 span{
+    animation: blink 1s ease-in-out infinite;
+}
+.center{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+
+}
+.cir1{
+    width: 180px;
+    height: 180px;
+    background-color: rgba(247, 16, 8, 0.205);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-top-color: rgba(255, 60, 0, 0.932);
+    margin: auto;
+    border-bottom-color: rgba(255, 60, 0, 0.932);
+    position: relative;
+    animation: r1 1s linear infinite;
+}
+.cir2{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(247, 16, 8, 0.205);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-top-color: rgba(255, 60, 0, 0.932);
+    margin: 16px;
+    border-bottom-color: rgba(255, 60, 0, 0.932);
+    position: relative;
+    animation: r2 0.5s linear infinite;
+}
+.c1, .c2{
+    background-color: red;
+    width: 80%;
+    height: 80%;
+    margin: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: c 1s infinite ease-in-out;
+    opacity: 0.6;
+}
+.c2{
+    animation-delay: 0.5s;
+    opacity: 0.6;
+}
+@keyframes c{
+    0%,100%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+@keyframes r1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes r2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes blink{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}

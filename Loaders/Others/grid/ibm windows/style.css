@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+.container{
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+}
+.box{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 102, 255);
+    display: inline-block;
+    animation: pulse 0.6s ease-in infinite alternate;
+}
+.box2, .box3{
+    animation-delay: 0.6s;
+}
+@keyframes pulse{
+    100%{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+.container{
+    width: 100px;
+    margin: 100px auto;
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.dot1{
+    background-color: orange;
+    animation: jump-up 0.6s 0.1s linear infinite;
+}
+.dot2{
+    background-color: red;
+    animation: jump-up 0.6s 0.2s linear infinite;
+}
+.dot3{
+    background-color: limegreen;
+    animation: jump-up 0.6s 0.3s linear infinite;
+}
+
+@keyframes jump-up{
+    50%{
+        transform: translate(0,15px);
+    }
+}
