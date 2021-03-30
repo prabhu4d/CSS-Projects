@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .progress {
+                width: 500px;
+                height: 40px;
+                background-color: #ccc;
+                border: 3px solid rgb(173, 173, 173);
+                overflow: hidden;
+                border-radius: 20px;
+            }
+            .progress__fill {
+                width: 0%;
+                height: 100%;
+                display: flex;
+                border-radius: 20px;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-family: sans-serif;
+                transition: width 50ms ease-in-out;
+                color: #eee;
+                background: linear-gradient(45deg, #b200f8, #ff1884);
+            }
+        </style>
+        <div class="progress">
+            <div class="progress__fill"></div>
+        </div>
+
+        <script>
+            let time;
+            const progressFill = document.querySelector(".progress__fill");
+
+            function updateProgressBar(value) {
+                value = Math.round(value);
+                progressFill.style.width = `${value}%`;
+                if (value > 10) {
+                    progressFill.textContent = `${value}%`;
+                } else {
+                    progressFill.textContent = null;
+                }
+            }
+
+            setInterval(update, 50);
+            let value = 0;
+            function update() {
+                value++;
+                if (value > 101) {
+                    value = 0;
+                }
+                updateProgressBar(value);
+            }
+        </script>
+    </body>
+</html>
