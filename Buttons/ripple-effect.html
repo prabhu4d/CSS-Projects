@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-height: 100vh;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            position: relative;
+            color: white;
+            font-size: 25px;
+            padding: 10px 30px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            overflow: hidden;
+            background: linear-gradient(90deg, rgb(2, 107, 155), rgb(2, 182, 77));
+        }
+        span{
+            position: absolute;
+            background-color: white;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: rippleAnimate 1s ease-in-out forwards;
+        }
+        @keyframes rippleAnimate {
+            0%{
+                width: 0px;
+                height: 0px;
+                opacity: 0.5;
+            }
+            100%{
+                width: 200%;
+                height: 200%;
+                opacity: 0;
+            }
+        }
+    </style>
+    <a href="#">Button</a>
+    <script>
+        const button = document.querySelector('a');
+        button.addEventListener('click', (e)=>{
+            let x = e.clientX - e.target.offsetLeft ;
+            let y = e.clientY - e.target.offsetTop ;
+            
+            let ripple = document.createElement('span');
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            button.appendChild(ripple);
+
+            setTimeout(()=>{
+                ripple.remove()
+            }, 1000);
+        })
+        
+    </script>
+</body>
+</html>
